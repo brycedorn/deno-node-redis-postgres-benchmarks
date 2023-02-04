@@ -1,0 +1,9 @@
+{
+  "importMap": "./import_map.json",
+  "tasks": {
+    "deno-redis": "deno bench --allow-env --allow-net tests/deno_redis_retrieval_bench.ts",
+    "deno-postgres": "deno bench --allow-env --allow-net tests/deno_postgres_retrieval_bench.ts",
+    "deno-node-redis": "deno bench --allow-env --allow-net tests/node_redis_retrieval_bench.ts",
+    "deno-node-postgres": "deno bench --allow-env --allow-net tests/node_postgres_retrieval_bench.ts"
+  }
+}

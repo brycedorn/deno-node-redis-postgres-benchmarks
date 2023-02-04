@@ -1,0 +1,18 @@
+{
+  "name": "node-redis-postgres-benchmark",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon -r dotenv/config app.js dotenv_config_path=../.env",
+    "redis_bench": "nodemon -r dotenv/config redis_bench.js dotenv_config_path=../.env",
+    "postgres_bench": "nodemon -r dotenv/config postgres_bench.js dotenv_config_path=../.env"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.7.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20",
+    "redis": "^4.6.4"
+  }
+}

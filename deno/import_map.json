@@ -1,0 +1,7 @@
+{
+  "imports": {
+    "supabase": "https://esm.sh/@supabase/supabase-js@1.35.4",
+    "dotenv": "https://deno.land/x/dotenv@v3.2.0/load.ts",
+    "redis": "https://deno.land/x/redis@v0.26.0/mod.ts"
+  }
+}
