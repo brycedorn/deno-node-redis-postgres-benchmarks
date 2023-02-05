@@ -1,6 +1,6 @@
 # Deno vs Node Redis/Postgres benchmarking
 
-As part of a dev.to [article](https://dev.to/bryce/why-deno-is-bad-for-caching-2l24-temp-slug-2805363).
+As part of a dev.to [article](https://dev.to/bryce/when-not-to-use-deno-5bnm).
 
 ## Results
 
@@ -10,7 +10,7 @@ Results from running on Apple M1 Max 64GB Ventura 13.1 from Amsterdam with both 
 | --- | --- | --- | --- | --- | --- |
 | no | Deno -> Redis | 65.06 ms/iter | (792 ns … 114.68 ms) | 111.41 ms | 114.68 ms |
 | no | Deno -> Postgres | **42.98 ms/iter** | (916 ns … 89.29 ms) | 79.8 ms | 89.29 ms |
-| yes | Deno -> Node -> Redis | **34.79 ms/iter** | (28.4 ms … 41.7 ms) | 36.53 ms | 41.7 m |
+| yes | Deno -> Node -> Redis | **34.79 ms/iter** | (28.4 ms … 41.7 ms) | 36.53 ms | 41.7 ms |
 | yes | Deno -> Node -> Postgres | 88.24 ms/iter | (667 ns … 205.44 ms) | 160.8 ms | 205.44 ms |
 
 ## Running locally
