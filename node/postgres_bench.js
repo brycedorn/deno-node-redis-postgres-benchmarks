@@ -10,27 +10,24 @@ const port = process.env.PORT || 3000;
 
 async function search(req, res) {
   const { hex } = req.params;
+  let result = null;
 
-  console.log(`Searching for #${hex}...`);
+  // console.log(`Searching for #${hex}...`);
 
-  try {
-    const { data: colors } = await supabase
-      .from("colors")
-      .select()
-      .eq("hex", hex);
+  const { data: colors } = await supabase
+    .from("colors")
+    .select()
+    .eq("hex", hex);
 
+  if (colors && colors.length > 0) {
     result = colors[0];
-
-    res.send({
-      data: result,
-    });
-  } catch (error) {
-    console.log(error);
   }
+
+  res.send({ data: result });
 }
 
 app.get("/search/:hex", search);
 
-app.listen(port, async () => {
+app.listen(port, () => {
   console.log(`App listening on port ${port}`);
 });

@@ -15,16 +15,13 @@ async function search(req, res) {
 
   try {
     const cachedResult = await client.get(hex);
+    let result = null;
 
     if (cachedResult) {
       result = JSON.parse(cachedResult);
-    } else {
-      result = null;
     }
 
-    res.send({
-      data: result,
-    });
+    res.send({ data: result });
   } catch (error) {
     console.log(error);
   }

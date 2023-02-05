@@ -10,9 +10,10 @@ Deno.bench("Deno -> Node -> Postgres", async () => {
     const response = await fetch(
       `http://localhost:3000/search/${iterations[n]}`,
     );
-    const cachedResult = await response.json();
 
-    console.log("Retrieved", n, "value from postgres:", cachedResult);
+    await response.json();
+
+    // console.log("Retrieved", n, "value from postgres:", cachedResult);
   }
 
   n += 1;
